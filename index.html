@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IRIS — Contact Profiles</title>
+  <!-- إضافة Font Awesome للأيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#000;
+      color:#fff;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+
+    /* Header */
+    header{width:100%; max-width:1200px; text-align:center; margin-bottom:28px}
+    header h1{font-size:56px; margin:0; color:#00aaff; letter-spacing:2px}
+
+    /* Main layout */
+    .main{width:100%; max-width:1200px; display:flex; gap:24px; align-items:stretch}
+    .card{flex:1; background:#0f1720; border-radius:14px; padding:36px; box-shadow:0 8px 30px rgba(0,0,0,0.6); border:1px solid rgba(255,255,255,0.04); display:flex; flex-direction:column; align-items:flex-start}
+    .card .avatar{width:96px;height:96px;border-radius:12px;background:linear-gradient(135deg,#00aaff,#6c63ff);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:#000;margin-bottom:14px}
+    .card h2{margin:0 0 8px 0;font-size:26px;color:#fff}
+    .role{color:#9aa4b2;margin-bottom:18px}
+
+    /* links/buttons as circular hyperlinks فقط الأيقونات */
+    .links{width:100%; display:flex; flex-direction:row; gap:15px; margin-top:20px}
+    .links a{
+      width: 60px; /* حجم دائري أكبر */
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(0,170,255,0.1);
+      border: 1px solid rgba(255,255,255,0.03);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #00aaff;
+      font-size: 24px; /* حجم الأيقونة أكبر */
+      transition: all 0.3s ease;
+    }
+    .links a:hover{
+      background: rgba(0,170,255,0.2);
+      transform: scale(1.1); /* تأثير تكبير عند التمرير */
+      color: #fff;
+    }
+
+    /* About Project section */
+    .about-section{width:100%; max-width:1200px; margin-top:40px; background:#0f1720; border-radius:14px; padding:36px; box-shadow:0 8px 30px rgba(0,0,0,0.6); border:1px solid rgba(255,255,255,0.04)}
+    .about-section h2{font-size:32px; margin:0 0 20px 0; color:#00aaff; text-align:center}
+    .about-section p{font-size:18px; line-height:1.6; color:#cfefff; margin:0}
+
+    /* Responsive */
+    @media (max-width:920px){
+      .main{flex-direction:column}
+      .card{padding:20px}
+      header h1{font-size:44px}
+      .about-section{padding:20px}
+      .about-section h2{font-size:28px}
+      .about-section p{font-size:16px}
+    }
+    @media (max-width:480px){
+      header h1{font-size:32px}
+      body{padding:18px}
+      .avatar{width:72px;height:72px;font-size:20px}
+      .card h2{font-size:20px}
+      .links a{width:50px; height:50px; font-size:20px}
+      .about-section h2{font-size:24px}
+      .about-section p{font-size:14px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>IRIS PROJECT</h1>
+  </header>
+
+  <main class="main">
+    <section class="card">
+      <div class="avatar" style="background:linear-gradient(135deg,#ff6b6b,#feca57);">AH</div> <!-- تعديل الألوان قليلاً للأفاتار الأول -->
+      <h2>Shahd Amr</h2>
+      <div class="role">Student / Frontend Developer</div>
+
+      <div class="links">
+        <a href="mailto:ahmed@example.com" target="_blank" rel="noopener noreferrer" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+
+        <a href="tel:+201234567890" target="_blank" rel="noopener noreferrer" title="Call">
+          <i class="fas fa-phone"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="avatar" style="background:linear-gradient(135deg,#48cae4,#023e8a);">MK</div> <!-- تعديل الألوان قليلاً للأفاتار الثاني -->
+      <h2>Ahmed Ehab</h2>
+      <div class="role">UX / Product Designer</div>
+
+      <div class="links">
+        <a href="mailto:mona@example.com" target="_blank" rel="noopener noreferrer" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+
+        <a href="tel:+201098765432" target="_blank" rel="noopener noreferrer" title="Call">
+          <i class="fas fa-phone"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/yourprofile2" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- About Project section (استبدال الصور بقسم النص) -->
+  <section class="about-section">
+    <h2>About Project</h2>
+    <p>
+      The IRIS Project is an innovative initiative focused on [وصف المشروع هنا]. Our team consists of talented individuals dedicated to [الهدف أو الوصف]. We aim to [الأهداف]. This project brings together creativity and technology to deliver exceptional results. For more details, feel free to contact us through the profiles above.
+    </p>
+  </section>
+
+</body>
+</html>
