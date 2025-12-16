@@ -173,3 +173,59 @@ footer {
         padding: 1.5rem;
     }
 }
+/* ===== Certificates Photo Frame Design ===== */
+
+.certificates {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.certificate-card {
+    background: linear-gradient(145deg, #1f2937, #111827);
+    border-radius: 18px;
+    padding: 1rem;
+    max-width: 320px;
+    box-shadow:
+        0 0 0 2px rgba(255,255,255,0.08),
+        0 15px 40px rgba(0,0,0,0.8);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.certificate-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 3px solid rgba(255,255,255,0.15);
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.1),
+        0 10px 25px rgba(0,0,0,0.7);
+    transition: transform 0.4s ease;
+}
+
+/* Text spacing */
+.certificate-card h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.certificate-card p {
+    color: #cbd5e0;
+    font-size: 0.95rem;
+}
+
+/* Hover effects */
+.certificate-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow:
+        0 0 0 2px rgba(255,255,255,0.15),
+        0 25px 60px rgba(0,0,0,0.9);
+}
+
+.certificate-card:hover img {
+    transform: scale(1.08);
+}
