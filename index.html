@@ -1,474 +1,341 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact IRIS Team</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فريق IRIS — تعلّم على مقاس كل طفل</title>
+<meta name="description" content="فريق IRIS: منصة تعلّم متكيّفة للأطفال. تعرّف على الفريق، الإنجازات، والجوائز — من ضمنها المركز الثاني في هاكاثون GDG بالجامعة المصرية الصينية (ECU).">
+<meta name="theme-color" content="#fef6ea">
 
-    <!-- Fonts & Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Bubblegum+Sans&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+<meta property="og:type" content="website">
+<meta property="og:title" content="فريق IRIS — تعلّم على مقاس كل طفل">
+<meta property="og:description" content="منصة تعلّم متكيّفة للأطفال — الفريق والإنجازات.">
+<meta property="og:image" content="asserts/mascot.png">
 
-    <style>
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Fredoka', 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
-            line-height: 1.6;
-            color: #2d3748;
-            background: linear-gradient(135deg, #fff9e6 0%, #ffe4b3 50%, #fff9e6 100%);
-            background-attachment: fixed;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Header */
-        header {
-            text-align: center;
-            padding: 2rem 2rem 3rem;
-            position: relative;
-        }
-
-        .logo-container {
-            margin-bottom: 1.5rem;
-            animation: logoFloat 3s ease-in-out infinite;
-        }
-
-        .logo-container img {
-            width: 250px;
-            height: auto;
-            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.15));
-        }
-
-        @keyframes logoFloat {
-            0%, 100% { transform: translateY(0px) rotate(-2deg); }
-            50% { transform: translateY(-15px) rotate(2deg); }
-        }
-
-        header h1 {
-            font-family: 'Bubblegum Sans', 'Comic Neue', 'Comic Sans MS', cursive;
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: #2d3748;
-            text-shadow: 3px 3px 0px rgba(255, 71, 87, 0.3),
-                         6px 6px 0px rgba(52, 152, 219, 0.2);
-            letter-spacing: 2px;
-        }
-
-        header h1 .word1 { color: #ff4757; }
-        header h1 .word2 { color: #3498db; }
-        header h1 .word3 { color: #27ae60; }
-
-        header p {
-            font-size: 1.3rem;
-            font-weight: 500;
-            color: #e67e22;
-        }
-
-        /* Main content */
-        main {
-            flex: 1;
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            animation: fadeIn 1s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Contact cards */
-        .contact-cards {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
-        }
-
-        .card {
-            background: #ffffff;
-            border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-            padding: 2.5rem;
-            text-align: center;
-            width: 320px;
-            margin: 1rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .card:nth-child(1) {
-            border: 5px solid #ff4757;
-            transform: rotate(-2deg);
-        }
-
-        .card:nth-child(2) {
-            border: 5px solid #3498db;
-        }
-
-        .card:nth-child(3) {
-            border: 5px solid #27ae60;
-            transform: rotate(2deg);
-        }
-
-        .card:hover {
-            transform: translateY(-15px) rotate(0deg) scale(1.05);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
-        }
-
-        .card img {
-            border-radius: 50%;
-            width: 130px;
-            height: 130px;
-            object-fit: cover;
-            margin-bottom: 1.5rem;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-
-        .card:nth-child(1) img {
-            border: 6px solid #ff4757;
-            box-shadow: 0 8px 20px rgba(255, 71, 87, 0.4);
-        }
-
-        .card:nth-child(2) img {
-            border: 6px solid #3498db;
-            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
-        }
-
-        .card:nth-child(3) img {
-            border: 6px solid #27ae60;
-            box-shadow: 0 8px 20px rgba(39, 174, 96, 0.4);
-        }
-
-        .card:hover img {
-            transform: scale(1.3) rotate(5deg);
-        }
-
-        .card h2 {
-            font-family: 'Bubblegum Sans', 'Comic Neue', 'Comic Sans MS', cursive;
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .card:nth-child(1) h2 { color: #ff4757; }
-        .card:nth-child(2) h2 { color: #3498db; }
-        .card:nth-child(3) h2 { color: #27ae60; }
-
-        .card > p {
-            color: #e67e22;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .contact-info p {
-            margin: 0.7rem 0;
-            font-size: 1rem;
-            color: #2d3748;
-        }
-
-        .contact-info i {
-            margin-right: 0.5rem;
-            font-size: 1.3rem;
-            transition: transform 0.3s ease;
-        }
-
-        .card:nth-child(1) .contact-info i { color: #ff4757; }
-        .card:nth-child(2) .contact-info i { color: #3498db; }
-        .card:nth-child(3) .contact-info i { color: #27ae60; }
-
-        .contact-info i:hover {
-            transform: scale(1.2) rotate(10deg);
-        }
-
-        .contact-info a {
-            color: #2d3748;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .contact-info a:hover {
-            color: #e67e22;
-            transform: scale(1.05);
-        }
-
-        /* About Project section */
-        .about-project {
-            background: #ffffff;
-            border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-            padding: 3rem;
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-            border: 5px solid #f1c40f;
-        }
-
-        .about-project h2 {
-            margin-bottom: 2rem;
-            font-family: 'Bubblegum Sans', 'Comic Neue', 'Comic Sans MS', cursive;
-            font-size: 2.5rem;
-            color: #e67e22;
-        }
-
-        .about-project p {
-            color: #2d3748;
-            margin-bottom: 1rem;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.7);
-            margin-top: 2rem;
-        }
-
-        footer p {
-            color: #2d3748;
-            font-weight: 600;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-            .contact-cards {
-                flex-direction: column;
-                align-items: center;
-            }
-            .card {
-                width: 100%;
-                max-width: 320px;
-                transform: rotate(0deg) !important;
-            }
-            .about-project {
-                padding: 2rem;
-            }
-        }
-
-        /* ===== Certificates Photo Frame Design ===== */
-        .certificates {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .certificate-card {
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 1.5rem;
-            max-width: 350px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-
-        .certificate-card:nth-child(1) {
-            border: 5px solid #ff4757;
-            transform: rotate(-1deg);
-        }
-
-        .certificate-card:nth-child(2) {
-            border: 5px solid #3498db;
-            transform: rotate(1deg);
-        }
-
-        .certificate-card:nth-child(3) {
-            border: 5px solid #27ae60;
-            transform: rotate(-1.5deg);
-        }
-
-        .certificate-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 15px;
-            border: 4px solid #f1c40f;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            transition: transform 0.4s ease;
-        }
-
-        .certificate-card h3 {
-            margin-top: 1.2rem;
-            margin-bottom: 0.7rem;
-            color: #e67e22;
-            font-family: 'Bubblegum Sans', 'Comic Neue', 'Comic Sans MS', cursive;
-            font-size: 1.4rem;
-        }
-
-        .certificate-card p {
-            color: #2d3748;
-            font-size: 1rem;
-            font-weight: 500;
-        }
-
-        .certificate-card p strong {
-            color: #27ae60;
-        }
-
-        .certificate-card:hover {
-            transform: translateY(-15px) rotate(0deg) scale(1.05);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
-        }
-
-        .certificate-card:hover img {
-            transform: scale(1.15);
-        }
-
-        /* Decorative elements */
-        body::before {
-            content: '★';
-            position: fixed;
-            top: 10%;
-            left: 5%;
-            font-size: 3rem;
-            color: #ff4757;
-            opacity: 0.3;
-            animation: twinkle 3s infinite;
-        }
-
-        body::after {
-            content: '★';
-            position: fixed;
-            top: 15%;
-            right: 8%;
-            font-size: 2.5rem;
-            color: #3498db;
-            opacity: 0.3;
-            animation: twinkle 2s infinite;
-        }
-
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 0.7; transform: scale(1.2); }
-        }
-    </style>
+<link rel="icon" href="asserts/iris-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;600;700;800&family=Baloo+2:wght@600;700;800&family=Cairo:wght@400;500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-    <div class="logo-container">
-        <img src="asserts/logo.png" alt="IRIS Logo">
+<!-- decorative confetti -->
+<div class="confetti" aria-hidden="true">
+  <i style="top:8%;inset-inline-start:6%;width:14px;height:14px;background:#f45b63"></i>
+  <i style="top:22%;inset-inline-end:9%;width:10px;height:10px;background:#1f67b1"></i>
+  <i style="top:46%;inset-inline-start:3%;width:9px;height:9px;background:#feca34"></i>
+  <i style="top:64%;inset-inline-end:4%;width:12px;height:12px;background:#49b87a"></i>
+  <i style="top:82%;inset-inline-start:12%;width:8px;height:8px;background:#8060b4"></i>
+  <i style="top:34%;inset-inline-start:48%;width:7px;height:7px;background:#f45b63;opacity:.3"></i>
+  <i style="top:90%;inset-inline-end:24%;width:10px;height:10px;background:#feca34"></i>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="IRIS">
+      <span class="brand-word" aria-hidden="true"><i class="l-r">I</i><i class="l-b">R</i><i class="l-g">i</i><i class="l-y">s</i></span>
+      <span class="sr-only">IRIS</span>
+    </a>
+
+    <nav class="nav" aria-label="التنقل">
+      <a href="#team"><span class="ar">الفريق</span><span class="en">Team</span></a>
+      <a href="#achievements"><span class="ar">الإنجازات</span><span class="en">Achievements</span></a>
+      <a href="#contact"><span class="ar">تواصل</span><span class="en">Contact</span></a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="lang-btn" id="langToggle" type="button" aria-label="Switch language">EN</button>
+      <a class="btn btn-primary btn-sm" href="https://iris-kohl-seven.vercel.app/" target="_blank" rel="noopener">
+        <span class="ar">المنصة</span><span class="en">Platform</span>
+      </a>
     </div>
-    <h1>
-        <span class="word1">Contact</span> 
-        <span class="word2">IRIS</span> 
-        <span class="word3">Team</span>
-    </h1>
-    <p>Get in touch with us today! 🌟</p>
+  </div>
 </header>
 
-<main>
-    <!-- Contact Cards -->
-    <section class="contact-cards">
+<main id="top">
 
-        <div class="card">
-            <img src="asserts/meee.jpg" alt="Ahmed Ehab">
-            <h2>Ahmed Ehab</h2>
-            <p>Student | Software Engineer</p>
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> <a href="mailto:aehab3850@gmail.com">aehab3850@gmail.com</a></p>
-                <p><i class="fas fa-mobile-alt"></i> <a href="tel:+201004202316">+201004202316</a></p>
-                <p><i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/ahmed-ehab-996241341" target="_blank">LinkedIn</a>
-                </p>
-            </div>
+  <!-- ============================================================ hero -->
+  <section class="hero wrap">
+    <div class="hero-copy" data-reveal>
+      <span class="eyebrow"><span class="ar">فريق IRIS · مشروع تعليمي</span><span class="en">Team IRIS · an education project</span></span>
+
+      <h1>
+        <span class="ar">بنبني تعلّم <span class="hl">على مقاس كل طفل</span></span>
+        <span class="en">Learning that fits <span class="hl">every child</span></span>
+      </h1>
+
+      <p class="lead">
+        <span class="ar">إحنا فريق من طلاب هندسة البرمجيات بنطوّر IRIS — منصة تعلّم متكيّفة بتعرّف مستوى مهارات الطفل وتبني له أنشطة على مقاسه، بالعربي والإنجليزي.</span>
+        <span class="en">We are a team of software engineering students building IRIS — an adaptive learning platform that maps each child's skills and builds activities that fit, in Arabic and English.</span>
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://iris-kohl-seven.vercel.app/" target="_blank" rel="noopener">
+          <span class="ar">شوف المنصة</span><span class="en">Explore the platform</span>
+        </a>
+        <a class="btn btn-ghost" href="#achievements">
+          <span class="ar">الإنجازات</span><span class="en">Our achievements</span>
+        </a>
+      </div>
+
+      <ul class="hero-chips">
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <span class="ar">عربي وإنجليزي</span><span class="en">Arabic &amp; English</span>
+        </li>
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <span class="ar">بلا تشخيص ولا درجات ذكاء</span><span class="en">No diagnosis, no IQ scores</span>
+        </li>
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <span class="ar">تعلّم باللعب</span><span class="en">Learning through play</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="hero-art" data-reveal>
+      <div class="hero-blob" aria-hidden="true"></div>
+      <img class="hero-mascot" src="asserts/mascot.png" alt="IRIS mascot" width="1100" height="1100">
+
+      <div class="float-card f1">
+        <span class="dot">🏆</span>
+        <span>
+          <span class="ar">المركز الثاني · هاكاثون GDG</span>
+          <span class="en">2nd place · GDG Hackathon</span>
+          <small><span class="ar">الجامعة المصرية الصينية</span><span class="en">Egyptian Chinese University</span></small>
+        </span>
+      </div>
+
+      <div class="float-card f2">
+        <span class="dot">⭐</span>
+        <span>
+          <span class="ar">المركز الأول · UCM</span>
+          <span class="en">1st place · UCM</span>
+          <small><span class="ar">IEEE RUSB</span><span class="en">IEEE RUSB</span></small>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ stats -->
+  <section class="wrap">
+    <div class="stats" data-reveal>
+      <div class="stat">
+        <b>3</b>
+        <span class="ar">أعضاء الفريق</span><span class="en">team members</span>
+      </div>
+      <div class="stat">
+        <b>4</b>
+        <span class="ar">إنجازات وجوائز</span><span class="en">awards &amp; honours</span>
+      </div>
+      <div class="stat">
+        <b>10+</b>
+        <span class="ar">مجال تعلّم في المنصة</span><span class="en">learning areas</span>
+      </div>
+      <div class="stat">
+        <b>2</b>
+        <span class="ar">لغة: عربي وإنجليزي</span><span class="en">languages</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ team -->
+  <section class="section wrap" id="team">
+    <div class="section-head" data-reveal>
+      <div>
+        <span class="kicker"><span class="ar">الفريق</span><span class="en">The team</span></span>
+        <h2><span class="ar">الناس اللي ورا IRIS</span><span class="en">The people behind IRIS</span></h2>
+        <p><span class="ar">٣ طلاب هندسة برمجيات، بيمسكوا التصميم والتطوير والتجربة مع بعض.</span><span class="en">Three software engineering students covering design, development and the learning experience.</span></p>
+      </div>
+    </div>
+
+    <div class="team-grid">
+      <!-- member 1 -->
+      <article class="member" style="--wash:var(--blue-wash);--ink:var(--blue-ink)" data-reveal>
+        <div class="member-photo"><img src="asserts/ahmed-ehab.jpg" alt="Ahmed Ehab" loading="lazy"></div>
+        <h3>Ahmed Ehab</h3>
+        <span class="role"><span class="ar">طالب · مهندس برمجيات</span><span class="en">Student · Software Engineer</span></span>
+        <div class="member-links">
+          <a href="mailto:aehab3850@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg>
+            aehab3850@gmail.com
+          </a>
+          <a href="tel:+201004202316">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h3l2 5-2.5 1.5a12 12 0 0 0 6 6L15 13l5 2v3a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.2A2 2 0 0 1 5 3z"/></svg>
+            <span dir="ltr">+20 100 420 2316</span>
+          </a>
+          <a href="https://www.linkedin.com/in/ahmed-ehab-996241341" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.02-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21h-4z"/></svg>
+            LinkedIn
+          </a>
         </div>
+      </article>
 
-        <div class="card">
-            <img src="asserts/shahd.jpeg" alt="Shahd Amr">
-            <h2>Shahd Amr</h2>
-            <p>Student | Software Engineer</p>
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> <a href="mailto:shahdeldeeb715@gmail.com">shahdeldeeb715@gmail.com</a></p>
-                <p><i class="fas fa-mobile-alt"></i> <a href="tel:+201060337799">+201060337799</a></p>
-                <p><i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/shahd-eldeeb" target="_blank">LinkedIn</a>
-                </p>
-            </div>
+      <!-- member 2 -->
+      <article class="member" style="--wash:var(--coral-wash);--ink:var(--coral-ink)" data-reveal>
+        <div class="member-photo"><img src="asserts/shahd-amr.jpg" alt="Shahd Amr" loading="lazy"></div>
+        <h3>Shahd Amr</h3>
+        <span class="role"><span class="ar">طالبة · مهندسة برمجيات</span><span class="en">Student · Software Engineer</span></span>
+        <div class="member-links">
+          <a href="mailto:shahdeldeeb715@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg>
+            shahdeldeeb715@gmail.com
+          </a>
+          <a href="tel:+201060337799">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h3l2 5-2.5 1.5a12 12 0 0 0 6 6L15 13l5 2v3a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.2A2 2 0 0 1 5 3z"/></svg>
+            <span dir="ltr">+20 106 033 7799</span>
+          </a>
+          <a href="https://www.linkedin.com/in/shahd-eldeeb" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.02-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21h-4z"/></svg>
+            LinkedIn
+          </a>
         </div>
+      </article>
 
-        <div class="card">
-            <img src="asserts/mazen.jpeg" alt="Mazen Mahmoud">
-            <h2>Mazen Mahmoud</h2>
-            <p>Student | Software Engineer</p>
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> <a href="mailto:mazenmahmoudmoussa@gmail.com">mazenmahmoudmoussa@gmail.com</a></p>
-                <p><i class="fas fa-mobile-alt"></i> <a href="tel:+201096275848">+201096275848</a></p>
-                <p><i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/mazen-mahmoud-276077333" target="_blank">LinkedIn</a>
-                </p>
-            </div>
+      <!-- member 3 -->
+      <article class="member" style="--wash:var(--green-wash);--ink:var(--green-ink)" data-reveal>
+        <div class="member-photo"><img src="asserts/mazen-mahmoud.jpg" alt="Mazen Mahmoud" loading="lazy"></div>
+        <h3>Mazen Mahmoud</h3>
+        <span class="role"><span class="ar">طالب · مهندس برمجيات</span><span class="en">Student · Software Engineer</span></span>
+        <div class="member-links">
+          <a href="mailto:mazenmahmoudmoussa@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg>
+            mazenmahmoudmoussa@gmail.com
+          </a>
+          <a href="tel:+201096275848">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h3l2 5-2.5 1.5a12 12 0 0 0 6 6L15 13l5 2v3a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.2A2 2 0 0 1 5 3z"/></svg>
+            <span dir="ltr">+20 109 627 5848</span>
+          </a>
+          <a href="https://www.linkedin.com/in/mazen-mahmoud-276077333" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.02-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21h-4z"/></svg>
+            LinkedIn
+          </a>
         </div>
+      </article>
+    </div>
+  </section>
 
-    </section>
+  <!-- ============================================================ achievements -->
+  <section class="section wrap" id="achievements">
+    <div class="section-head" data-reveal>
+      <div>
+        <span class="kicker"><span class="ar">الإنجازات</span><span class="en">Achievements</span></span>
+        <h2><span class="ar">محطات فخورين بيها</span><span class="en">Milestones we are proud of</span></h2>
+        <p><span class="ar">من مسابقات IEEE لحد هاكاثون GDG — كل خطوة كانت دافع نكمّل.</span><span class="en">From IEEE competitions to the GDG hackathon — every step pushed us further.</span></p>
+      </div>
+    </div>
 
-    <!-- Certificates Section -->
-    <section class="about-project">
-        <h2>🏆 Certificates & Achievements 🏆</h2>
-
-        <div class="certificates">
-            <div class="certificate-card">
-                <img src="asserts/Image (1).jpg" alt="IC-FTAI Certificate">
-                <h3>IC-FTAI 2025 – IEEE Egypt</h3>
-                <p>
-                    IRIS Project selected among the <strong>Top 6 out of 21</strong>
-                    projects for innovation, research quality, and social impact.
-                </p>
-            </div>
-
-            <div class="certificate-card">
-                <img src="asserts/Image (2).jpg" alt="UCM Certificate">
-                <h3>First Place – UCM Competition</h3>
-                <p>
-                    Awarded <strong>1st Place</strong> at IEEE RUSB – AlRyada University
-                    for technical excellence and teamwork.
-                </p>
-            </div>
-
-            <div class="certificate-card">
-                <img src="asserts/giza.jpeg" alt="Engineers Syndicate Giza">
-                <h3>Engineers Syndicate - Giza</h3>
-                <p>
-                    IRIS Project was presented at the <strong>Giza Engineers Syndicate</strong> 
-                    and received tremendous appreciation. They will provide support and assistance 
-                    to develop the project further.
-                </p>
-            </div>
+    <!-- newest / featured -->
+    <article class="featured" data-reveal>
+      <div class="award-art" aria-hidden="true">
+        <div class="medal">
+          <b>2</b>
+          <span class="rank">2ND PLACE</span>
         </div>
-    </section>
+        <span class="spark s1">✦</span>
+        <span class="spark s2">✦</span>
+        <span class="spark s3">✦</span>
+      </div>
+
+      <div class="featured-body">
+        <span class="pill-new"><span class="ar">جديد</span><span class="en">New</span></span>
+        <h3>
+          <span class="ar">المركز الثاني — هاكاثون GDG</span>
+          <span class="en">Second place — GDG Hackathon</span>
+        </h3>
+        <p>
+          <span class="ar">حصلنا على <strong>المركز الثاني</strong> في هاكاثون GDG المقام في <strong>الجامعة المصرية الصينية (ECU)</strong>، بعد منافسة قوية قدّمنا فيها IRIS كحل تعليمي بيبدأ من الطفل نفسه بدل ما يبدأ من المنهج.</span>
+          <span class="en">We won <strong>second place</strong> at the GDG Hackathon hosted by the <strong>Egyptian Chinese University (ECU)</strong>, presenting IRIS as a learning solution that starts from the child rather than the curriculum.</span>
+        </p>
+        <div class="tag-row">
+          <span class="tag">GDG</span>
+          <span class="tag"><span class="ar">الجامعة المصرية الصينية · ECU</span><span class="en">Egyptian Chinese University · ECU</span></span>
+          <span class="tag"><span class="ar">المركز الثاني</span><span class="en">2nd place</span></span>
+          <span class="tag">2025</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="awards-grid">
+      <!-- UCM: badge card (no photo yet) -->
+      <article class="award award-badge" style="--ink:var(--blue-ink);--tone1:#d9ebfb;--tone2:#a9cdf0" data-reveal>
+        <div class="award-media badge-media">
+          <div class="mini-medal"><b>1</b><span>1ST PLACE</span></div>
+          <span class="spark m1">&#10022;</span>
+          <span class="spark m2">&#10022;</span>
+        </div>
+        <div class="award-body">
+          <h3><span class="ar">المركز الأول — UCM</span><span class="en">First place — UCM</span></h3>
+          <p>
+            <span class="ar"><strong>المركز الأول</strong> في مسابقة UCM بـ IEEE RUSB – جامعة الريادة، للتميّز التقني والعمل الجماعي.</span>
+            <span class="en"><strong>First place</strong> at the UCM competition, IEEE RUSB – AlRyada University, for technical excellence and teamwork.</span>
+          </p>
+        </div>
+      </article>
+
+      <!-- IC-FTAI -->
+      <article class="award" style="--ink:var(--purple-ink)" data-reveal>
+        <div class="award-media">
+          <img src="asserts/ic-ftai-team.jpg" alt="IRIS team at IC-FTAI 2025" loading="lazy" style="object-position:center 22%">
+          <span class="badge">Top 6 / 21</span>
+        </div>
+        <div class="award-body">
+          <h3><span class="ar">IC-FTAI 2025 — IEEE Egypt</span><span class="en">IC-FTAI 2025 — IEEE Egypt</span></h3>
+          <p>
+            <span class="ar">اختيار IRIS ضمن <strong>أفضل ٦ مشروعات من ٢١</strong>، للابتكار وجودة البحث والأثر المجتمعي.</span>
+            <span class="en">IRIS was selected among the <strong>top 6 out of 21</strong> projects for innovation, research quality and social impact.</span>
+          </p>
+        </div>
+      </article>
+
+      <!-- Giza syndicate -->
+      <article class="award" style="--ink:var(--green-ink)" data-reveal>
+        <div class="award-media">
+          <img src="asserts/giza-syndicate.jpg" alt="IRIS at the Giza Engineers Syndicate" loading="lazy">
+          <span class="badge"><span class="ar">تقدير</span><span class="en">Honoured</span></span>
+        </div>
+        <div class="award-body">
+          <h3><span class="ar">نقابة مهندسين الجيزة</span><span class="en">Giza Engineers Syndicate</span></h3>
+          <p>
+            <span class="ar">عرضنا IRIS في <strong>نقابة مهندسين الجيزة</strong> واتقابلنا بتقدير كبير، مع وعد بدعم المشروع ومساعدته على التطوير.</span>
+            <span class="en">We presented IRIS at the <strong>Giza Engineers Syndicate</strong> and received strong appreciation, with support pledged to help the project grow.</span>
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================================ contact -->
+  <section class="wrap">
+    <div class="contact" id="contact" data-reveal>
+      <div>
+        <h2><span class="ar">تحب تتواصل مع الفريق؟</span><span class="en">Want to reach the team?</span></h2>
+        <p>
+          <span class="ar">لو عندك سؤال عن المنصة، شراكة، أو دعوة لعرض IRIS — إحنا جاهزين.</span>
+          <span class="en">Questions about the platform, partnerships, or an invitation to present IRIS — we are ready.</span>
+        </p>
+      </div>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="mailto:aehab3850@gmail.com">
+          <span class="ar">راسلنا</span><span class="en">Email us</span>
+        </a>
+        <a class="btn btn-ghost" href="https://iris-kohl-seven.vercel.app/" target="_blank" rel="noopener">
+          <span class="ar">الموقع الرئيسي</span><span class="en">Main website</span>
+        </a>
+      </div>
+    </div>
+  </section>
 </main>
 
-<footer>
-    <p>💙 2025 IRIS Team. Made with love! 💚</p>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© 2025 <span class="ar">فريق IRIS — صُنع بحب</span><span class="en">Team IRIS — made with love</span></span>
+    <a href="https://iris-kohl-seven.vercel.app/" target="_blank" rel="noopener">iris-kohl-seven.vercel.app</a>
+  </div>
 </footer>
 
-<script>
-// Smooth scroll for any anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
