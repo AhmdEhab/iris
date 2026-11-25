@@ -1,6 +1,6 @@
 # IRIS — Team & Achievements
 
-صفحة الفريق والإنجازات لمشروع **IRIS**: منصة تعلّم متكيّفة للأطفال.
+صفحة الفريق والإنجازات لمشروع **IRIS**: منصة تعلّم متكيّفة للأطفال — فريق من طلاب **كلية الحاسبات والمعلومات**.
 التصميم مبني على نفس هوية الموقع الرئيسي [iris-kohl-seven.vercel.app](https://iris-kohl-seven.vercel.app/).
 
 A static, bilingual (AR / EN) page for the IRIS team — built with plain HTML, CSS and JavaScript.
@@ -11,7 +11,7 @@ A static, bilingual (AR / EN) page for the IRIS team — built with plain HTML, 
 
 | القسم | الوصف |
 | --- | --- |
-| Hero | مقدمة الفريق + الـ mascot + أحدث إنجاز |
+| Intro | عنوان الفريق + نبذة قصيرة + أزرار سريعة (بدون سكشن تمهيدي طويل) |
 | Stats | أرقام سريعة (أعضاء / جوائز / مجالات / لغات) |
 | Team | كروت الأعضاء مع الإيميل والتليفون وLinkedIn |
 | Achievements | الإنجاز الأحدث (هاكاثون GDG) + باقي الجوائز |
