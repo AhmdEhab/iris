@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>فريق IRIS — تعلّم على مقاس كل طفل</title>
-<meta name="description" content="IRIS: منصة تعلّم متكيّفة للأطفال من فريق طلاب كلية الحاسبات والمعلومات — الفريق والجوائز، ومنها المركز الثاني في هاكاثون GDG بالجامعة المصرية الصينية (ECU).">
+<title>IRIS — تعلّم على مقاس كل طفل</title>
+<meta name="description" content="IRIS: منصة تعلّم متكيّفة للأطفال من فريق كلية الحاسبات والمعلومات. تعرّف على الفريق وتواصل معانا في خطوة واحدة.">
 <meta name="theme-color" content="#fff7ec">
-
 <meta property="og:type" content="website">
-<meta property="og:title" content="فريق IRIS — تعلّم على مقاس كل طفل">
-<meta property="og:description" content="منصة تعلّم متكيّفة للأطفال — الفريق والإنجازات.">
+<meta property="og:title" content="IRIS — تعلّم على مقاس كل طفل">
+<meta property="og:description" content="بطاقة فريق IRIS: من إحنا، وإزاي تتواصل معانا.">
 <meta property="og:image" content="asserts/logo-iris.png">
 
 <link rel="icon" href="asserts/logo-iris-256.png">
@@ -17,312 +16,244 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;600;700;800&family=Baloo+2:wght@600;700;800&family=Cairo:wght@400;600;700;800;900&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
 <script>document.documentElement.className += " has-js";</script>
-<link rel="stylesheet" href="styles.css?v=7">
+<link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
 
-<div class="bg" aria-hidden="true">
-  <span class="blob b1"></span>
-  <span class="blob b2"></span>
-  <span class="blob b3"></span>
-  <span class="blob b4"></span>
-  <span class="dots"></span>
+<div class="world" aria-hidden="true">
+  <span class="blob b-a"></span>
+  <span class="blob b-b"></span>
+  <span class="blob b-c"></span>
+  <span class="grain"></span>
 </div>
 
-<header class="site-head" id="siteHead">
-  <div class="wrap head-inner">
-    <a class="brand" href="#top" aria-label="IRIS">
-      <img src="asserts/logo-iris.png" alt="IRIS" width="720" height="720">
-    </a>
-
-    <nav class="nav" aria-label="التنقل">
-      <a href="#team"><span class="ar">الفريق</span><span class="en">Team</span></a>
-      <a href="#achievements"><span class="ar">الإنجازات</span><span class="en">Achievements</span></a>
-      <a href="#contact"><span class="ar">تواصل</span><span class="en">Contact</span></a>
-    </nav>
-
-    <div class="head-actions">
-      <button class="lang" id="langToggle" type="button" aria-label="Switch language">EN</button>
-      <a class="btn btn-primary btn-sm" href="https://iris-kohl-seven.vercel.app/" target="_blank" rel="noopener">
-        <span class="ar">المنصة</span><span class="en">Platform</span>
-      </a>
-    </div>
-  </div>
-  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+<header class="bar">
+  <a class="bar-brand" href="#top" aria-label="IRIS">
+    <img src="asserts/logo-iris.png" alt="IRIS" width="750" height="533">
+  </a>
+  <button class="lang" id="langToggle" type="button" aria-label="Switch language">EN</button>
 </header>
 
 <main id="top">
 
-  <!-- ============================================================ hero -->
-  <section class="hero wrap">
+  <!-- ══════════════════════════════ hero -->
+  <section class="hero">
+    <div class="stage" id="stage">
+      <span class="ring" aria-hidden="true"></span>
+
+      <img class="hero-logo" src="asserts/logo-iris.png" alt="IRIS" width="750" height="533">
+
+      <svg class="doodle d-spark s-a" viewBox="0 0 24 24" aria-hidden="true" data-depth="16">
+        <path d="M12 2.5c.7 4.6 2.4 6.3 7 7-4.6.7-6.3 2.4-7 7-.7-4.6-2.4-6.3-7-7 4.6-.7 6.3-2.4 7-7z"/>
+      </svg>
+      <svg class="doodle d-spark s-b" viewBox="0 0 24 24" aria-hidden="true" data-depth="26">
+        <path d="M12 2.5c.7 4.6 2.4 6.3 7 7-4.6.7-6.3 2.4-7 7-.7-4.6-2.4-6.3-7-7 4.6-.7 6.3-2.4 7-7z"/>
+      </svg>
+      <svg class="doodle d-arc" viewBox="0 0 90 90" aria-hidden="true" data-depth="12">
+        <path d="M8 70C14 38 40 14 78 12"/>
+      </svg>
+      <svg class="doodle d-wave" viewBox="0 0 80 20" aria-hidden="true" data-depth="20">
+        <path d="M2 12c8-9 14 6 22-1s14 6 22-1 14 6 22-1"/>
+      </svg>
+
+      <span class="sticker st-1" data-depth="22"><span class="ar">تعلّم باللعب</span><span class="en">Playful learning</span></span>
+      <span class="sticker st-2" data-depth="14"><span class="ar">عربي + إنجليزي</span><span class="en">AR + EN</span></span>
+      <span class="sticker st-3" data-depth="18"><span class="ar">مركز تاني · GDG</span><span class="en">2nd place · GDG</span></span>
+    </div>
+
     <div class="hero-copy">
-      <span class="label" data-reveal>
-        <i>✦</i>
-        <span class="ar">فريق IRIS · كلية الحاسبات والمعلومات</span>
-        <span class="en">Team IRIS · Computers &amp; Information</span>
-      </span>
-
-      <h1 data-reveal style="--d:80ms">
-        <span class="line ar">بنبني تعلّم</span>
-        <span class="line ar">
-          على <span class="w w-blue">مقاس<svg viewBox="0 0 120 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c14-6 26 4 40-1s26-6 38 1 20 2 38-3"/></svg></span>
-          <span class="w w-coral">كل</span>
-          <span class="w w-green">طفل</span>
-        </span>
-
-        <span class="line en">Learning that fits</span>
-        <span class="line en">
-          <span class="w w-blue">every<svg viewBox="0 0 120 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c14-6 26 4 40-1s26-6 38 1 20 2 38-3"/></svg></span>
-          <span class="w w-coral">single</span>
-          <span class="w w-green">child</span>
-        </span>
+      <h1 data-reveal>
+        <span class="ar">عالم على مقاس <span class="hl">طفلك</span></span>
+        <span class="en">A little world that fits <span class="hl">your child</span></span>
       </h1>
-
-      <p class="lead" data-reveal style="--d:160ms">
-        <span class="ar">إحنا فريق من طلاب كلية الحاسبات والمعلومات بنطوّر IRIS — منصة تعلّم متكيّفة بتعرّف مستوى مهارات الطفل وتبني له أنشطة على مقاسه، بالعربي والإنجليزي.</span>
-        <span class="en">A team of students from the Faculty of Computers &amp; Information building IRIS — adaptive learning that maps each child's skills and builds activities that fit, in Arabic and English.</span>
+      <p class="sub" data-reveal style="--d:90ms">
+        <span class="ar">IRIS منصة تعلّم متكيّفة بتفهم مستوى كل طفل وتبني له أنشطة على مقاسه — من فريق <b>كلية الحاسبات والمعلومات</b>.</span>
+        <span class="en">IRIS is adaptive learning that reads each child's level and builds activities that fit — by a team from the <b>Faculty of Computers &amp; Information</b>.</span>
       </p>
 
-      <div class="hero-cta" data-reveal style="--d:240ms">
-        <a class="btn btn-primary" href="https://iris-kohl-seven.vercel.app/" target="_blank" rel="noopener" data-magnetic>
-          <span class="ar">جرّب المنصة</span><span class="en">Try the platform</span>
+      <div class="cta-row" data-reveal style="--d:170ms">
+        <a class="btn btn-main confetti" href="#contact">
+          <span class="ar">تواصل معانا</span><span class="en">Get in touch</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h13M12.5 5.5 19 12l-6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a class="btn btn-ghost" href="#achievements" data-magnetic>
-          <span class="ar">شوف الإنجازات</span><span class="en">See achievements</span>
+        <a class="btn btn-soft" href="https://iris-kohl-seven.vercel.app/" target="_blank" rel="noopener">
+          <span class="ar">جرّب المنصة</span><span class="en">Try the platform</span>
         </a>
       </div>
 
-      <ul class="chips" data-reveal style="--d:320ms">
-        <li><b>3</b> <span class="ar">أعضاء</span><span class="en">members</span></li>
-        <li><b>4</b> <span class="ar">جوائز</span><span class="en">awards</span></li>
-        <li><b>10+</b> <span class="ar">مجال تعلّم</span><span class="en">learning areas</span></li>
-        <li><b>2</b> <span class="ar">لغة</span><span class="en">languages</span></li>
+      <ul class="honors" data-reveal style="--d:250ms">
+        <li class="honor gold">
+          <span class="honor-dot">2</span>
+          <span><span class="ar">هاكاثون GDG · ECU</span><span class="en">GDG Hackathon · ECU</span></span>
+        </li>
+        <li class="honor">
+          <span class="honor-dot">1</span>
+          <span><span class="ar">UCM · IEEE</span><span class="en">UCM · IEEE</span></span>
+        </li>
+        <li class="honor">
+          <span class="honor-dot">6</span>
+          <span><span class="ar">IC-FTAI · أفضل ٦</span><span class="en">IC-FTAI · top 6</span></span>
+        </li>
       </ul>
     </div>
 
-    <div class="hero-art" data-reveal style="--d:120ms" id="heroArt">
-      <div class="art-card">
-        <img src="asserts/logo-iris.png" alt="IRIS" width="720" height="720">
-        <span class="art-note"><span class="ar">تعلّم باللعب ✦ عربي وإنجليزي</span><span class="en">Learning through play ✦ AR + EN</span></span>
-      </div>
-      <span class="float f-star" data-depth="18"><span class="ico">✦</span><span class="ar">تعلّم باللعب</span><span class="en">Playful</span></span>
-      <span class="float f-heart" data-depth="26"><span class="ico">♥</span><span class="ar">على مقاسه</span><span class="en">Fits them</span></span>
-      <span class="float f-bolt" data-depth="14"><span class="ico">⚡</span><span class="ar">خطوة كل يوم</span><span class="en">Daily steps</span></span>
-      <span class="float f-award" data-depth="22">
-        <span class="medal-dot">2</span>
-        <span><span class="ar">المركز الثاني · GDG</span><span class="en">2nd place · GDG</span></span>
-      </span>
-    </div>
+    <svg class="scroll-cue" viewBox="0 0 24 40" aria-hidden="true">
+      <rect x="1.5" y="1.5" width="21" height="37" rx="10.5" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle class="cue-dot" cx="12" cy="11" r="3.2"/>
+    </svg>
   </section>
 
-  <!-- ============================================================ marquee -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span><span class="ar">تعلّم باللعب</span><span class="en">Learning through play</span></span>
-      <span><span class="ar">عربي وإنجليزي</span><span class="en">Arabic &amp; English</span></span>
-      <span><span class="ar">من غير تشخيص ولا درجات ذكاء</span><span class="en">No diagnosis, no IQ scores</span></span>
-      <span><span class="ar">٣ أعضاء · ٤ جوائز</span><span class="en">3 members · 4 awards</span></span>
-      <span><span class="ar">تعلّم باللعب</span><span class="en">Learning through play</span></span>
-      <span><span class="ar">عربي وإنجليزي</span><span class="en">Arabic &amp; English</span></span>
-      <span><span class="ar">من غير تشخيص ولا درجات ذكاء</span><span class="en">No diagnosis, no IQ scores</span></span>
-      <span><span class="ar">٣ أعضاء · ٤ جوائز</span><span class="en">3 members · 4 awards</span></span>
-    </div>
-  </div>
-
-  <!-- ============================================================ bento stats -->
-  <section class="wrap">
-    <div class="bento">
-      <div class="cell" style="--tone:var(--blue);--wash:var(--blue-wash);--ico:'👥'" data-reveal>
-        <b data-count="3">0</b>
-        <span class="ar">أعضاء الفريق</span><span class="en">team members</span>
-      </div>
-      <div class="cell" style="--tone:var(--red);--wash:var(--red-wash);--d:80ms;--ico:'🏆'" data-reveal>
-        <b data-count="4">0</b>
-        <span class="ar">إنجازات وجوائز</span><span class="en">awards &amp; honours</span>
-      </div>
-      <div class="cell" style="--tone:var(--green);--wash:var(--green-wash);--d:160ms;--ico:'📚'" data-reveal>
-        <b data-count="10" data-suffix="+">0</b>
-        <span class="ar">مجال تعلّم في المنصة</span><span class="en">learning areas</span>
-      </div>
-      <div class="cell" style="--tone:var(--orange);--wash:var(--orange-wash);--d:240ms;--ico:'🌍'" data-reveal>
-        <b data-count="2">0</b>
-        <span class="ar">لغة: عربي وإنجليزي</span><span class="en">languages</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================ team -->
-  <section class="section wrap" id="team">
+  <!-- ══════════════════════════════ team -->
+  <section class="team" id="team">
     <header class="sec-head" data-reveal>
-      <span class="kicker"><span class="ar">الفريق</span><span class="en">The team</span></span>
-      <h2><span class="ar">الناس اللي ورا IRIS</span><span class="en">The people behind IRIS</span></h2>
-      <p><span class="ar">٣ طلاب من كلية الحاسبات والمعلومات، بيمسكوا التطوير والتصميم وتجربة التعلّم مع بعض.</span><span class="en">Three students from the Faculty of Computers &amp; Information covering development, design and the learning experience.</span></p>
+      <h2><span class="ar">إحنا ٣ ورا IRIS</span><span class="en">Three people behind IRIS</span></h2>
+      <p><span class="ar">كل واحد فينا ماسك جزء، وكلنا بنشتغل على نفس الحلم.</span><span class="en">Each of us owns a piece — all chasing the same idea.</span></p>
     </header>
 
-    <div class="team">
-      <article class="pcard" style="--tone:var(--blue);--wash:var(--blue-wash);--rot:-1.4deg" data-reveal data-tilt>
-        <div class="pc-avatar"><img src="asserts/ahmed-ehab.jpg" alt="Ahmed Ehab" loading="lazy"></div>
-        <h3>Ahmed Ehab</h3>
-        <p class="role"><span class="ar">طالب · كلية الحاسبات والمعلومات</span><span class="en">Student · Computers &amp; Information</span></p>
-        <a class="mail" href="mailto:aehab3850@gmail.com">aehab3850@gmail.com</a>
-        <div class="pc-actions">
-          <a class="icon-btn" href="mailto:aehab3850@gmail.com" aria-label="Email Ahmed Ehab" title="aehab3850@gmail.com">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg>
-          </a>
-          <a class="icon-btn" href="tel:+201004202316" aria-label="Call Ahmed Ehab" title="+20 100 420 2316">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h3l2 5-2.5 1.5a12 12 0 0 0 6 6L15 13l5 2v3a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.2A2 2 0 0 1 5 3z"/></svg>
-          </a>
-          <a class="icon-btn" href="https://www.linkedin.com/in/ahmed-ehab-996241341" target="_blank" rel="noopener" aria-label="Ahmed Ehab on LinkedIn" title="LinkedIn">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.02-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21h-4z"/></svg>
-          </a>
+    <div class="lineup">
+      <article class="mate" style="--tone:#1d4e9c;--wash:#e9f0fb;--rot:-1.6deg" data-reveal>
+        <div class="mate-photo">
+          <img src="asserts/ahmed-ehab.jpg" alt="Ahmed Ehab" loading="lazy">
+          <svg class="mate-star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c.7 4.6 2.4 6.3 7 7-4.6.7-6.3 2.4-7 7-.7-4.6-2.4-6.3-7-7 4.6-.7 6.3-2.4 7-7z"/></svg>
+        </div>
+        <div class="mate-info">
+          <h3>Ahmed Ehab</h3>
+          <p class="role"><span class="ar">تطوير المنصة</span><span class="en">Product &amp; development</span></p>
+          <div class="links">
+            <a href="mailto:aehab3850@gmail.com" aria-label="Email Ahmed Ehab" title="aehab3850@gmail.com">
+              <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+            </a>
+            <a href="tel:+201004202316" aria-label="Call Ahmed Ehab" title="+20 100 420 2316">
+              <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M5 3h3l2 5-2.5 1.5a12 12 0 0 0 6 6L15 13l5 2v3a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.2A2 2 0 0 1 5 3z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/ahmed-ehab-996241341" target="_blank" rel="noopener" aria-label="Ahmed Ehab on LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.02-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21h-4z"/></svg>
+            </a>
+          </div>
         </div>
       </article>
 
-      <article class="pcard" style="--tone:var(--red);--wash:var(--red-wash);--rot:1.2deg" data-reveal data-tilt>
-        <div class="pc-avatar"><img src="asserts/shahd-amr.jpg" alt="Shahd Amr" loading="lazy"></div>
-        <h3>Shahd Amr</h3>
-        <p class="role"><span class="ar">طالبة · كلية الحاسبات والمعلومات</span><span class="en">Student · Computers &amp; Information</span></p>
-        <a class="mail" href="mailto:shahdeldeeb715@gmail.com">shahdeldeeb715@gmail.com</a>
-        <div class="pc-actions">
-          <a class="icon-btn" href="mailto:shahdeldeeb715@gmail.com" aria-label="Email Shahd Amr" title="shahdeldeeb715@gmail.com">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg>
-          </a>
-          <a class="icon-btn" href="tel:+201060337799" aria-label="Call Shahd Amr" title="+20 106 033 7799">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h3l2 5-2.5 1.5a12 12 0 0 0 6 6L15 13l5 2v3a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.2A2 2 0 0 1 5 3z"/></svg>
-          </a>
-          <a class="icon-btn" href="https://www.linkedin.com/in/shahd-eldeeb" target="_blank" rel="noopener" aria-label="Shahd Amr on LinkedIn" title="LinkedIn">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.02-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21h-4z"/></svg>
-          </a>
+      <article class="mate" style="--tone:#e8322e;--wash:#fdeaea;--rot:1.4deg" data-reveal>
+        <div class="mate-photo">
+          <img src="asserts/shahd-amr.jpg" alt="Shahd Amr" loading="lazy">
+          <svg class="mate-star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c.7 4.6 2.4 6.3 7 7-4.6.7-6.3 2.4-7 7-.7-4.6-2.4-6.3-7-7 4.6-.7 6.3-2.4 7-7z"/></svg>
+        </div>
+        <div class="mate-info">
+          <h3>Shahd Amr</h3>
+          <p class="role"><span class="ar">تصميم تجربة التعلّم</span><span class="en">Learning experience</span></p>
+          <div class="links">
+            <a href="mailto:shahdeldeeb715@gmail.com" aria-label="Email Shahd Amr" title="shahdeldeeb715@gmail.com">
+              <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+            </a>
+            <a href="tel:+201060337799" aria-label="Call Shahd Amr" title="+20 106 033 7799">
+              <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M5 3h3l2 5-2.5 1.5a12 12 0 0 0 6 6L15 13l5 2v3a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.2A2 2 0 0 1 5 3z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/shahd-eldeeb" target="_blank" rel="noopener" aria-label="Shahd Amr on LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.02-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21h-4z"/></svg>
+            </a>
+          </div>
         </div>
       </article>
 
-      <article class="pcard" style="--tone:var(--green);--wash:var(--green-wash);--rot:-0.8deg" data-reveal data-tilt>
-        <div class="pc-avatar"><img src="asserts/mazen-mahmoud.jpg" alt="Mazen Mahmoud" loading="lazy"></div>
-        <h3>Mazen Mahmoud</h3>
-        <p class="role"><span class="ar">طالب · كلية الحاسبات والمعلومات</span><span class="en">Student · Computers &amp; Information</span></p>
-        <a class="mail" href="mailto:mazenmahmoudmoussa@gmail.com">mazenmahmoudmoussa@gmail.com</a>
-        <div class="pc-actions">
-          <a class="icon-btn" href="mailto:mazenmahmoudmoussa@gmail.com" aria-label="Email Mazen Mahmoud" title="mazenmahmoudmoussa@gmail.com">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg>
-          </a>
-          <a class="icon-btn" href="tel:+201096275848" aria-label="Call Mazen Mahmoud" title="+20 109 627 5848">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h3l2 5-2.5 1.5a12 12 0 0 0 6 6L15 13l5 2v3a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.2A2 2 0 0 1 5 3z"/></svg>
-          </a>
-          <a class="icon-btn" href="https://www.linkedin.com/in/mazen-mahmoud-276077333" target="_blank" rel="noopener" aria-label="Mazen Mahmoud on LinkedIn" title="LinkedIn">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.02-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21h-4z"/></svg>
-          </a>
+      <article class="mate" style="--tone:#2e9a5b;--wash:#e6f6ed;--rot:-1deg" data-reveal>
+        <div class="mate-photo">
+          <img src="asserts/mazen-mahmoud.jpg" alt="Mazen Mahmoud" loading="lazy">
+          <svg class="mate-star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c.7 4.6 2.4 6.3 7 7-4.6.7-6.3 2.4-7 7-.7-4.6-2.4-6.3-7-7 4.6-.7 6.3-2.4 7-7z"/></svg>
         </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- ============================================================ achievements -->
-  <section class="section wrap" id="achievements">
-    <header class="sec-head" data-reveal>
-      <span class="kicker"><span class="ar">الإنجازات</span><span class="en">Achievements</span></span>
-      <h2><span class="ar">محطات فخورين بيها</span><span class="en">Milestones we are proud of</span></h2>
-      <p><span class="ar">من مسابقات IEEE لحد هاكاثون GDG — كل خطوة كانت دافع نكمّل.</span><span class="en">From IEEE competitions to the GDG hackathon — every step pushed us further.</span></p>
-    </header>
-
-    <article class="featured confetti-host" data-reveal id="gdgCard">
-      <div class="f-media">
-        <img src="asserts/gdg-ecu.jpg" alt="IRIS team at the GDG Hackathon holding the Second Winner cheque" loading="lazy">
-        <span class="ribbon"><b>2</b> 2ND PLACE</span>
-      </div>
-      <div class="f-body">
-        <span class="new-pill"><span class="ar">جديد</span><span class="en">New</span></span>
-        <h3><span class="ar">المركز الثاني — هاكاثون GDG</span><span class="en">Second place — GDG Hackathon</span></h3>
-        <p>
-          <span class="ar">حصلنا على <strong>المركز الثاني</strong> في هاكاثون GDG المقام في <strong>الجامعة المصرية الصينية (ECU)</strong>، بعد منافسة قوية قدّمنا فيها IRIS كحل تعليمي بيبدأ من الطفل نفسه بدل ما يبدأ من المنهج.</span>
-          <span class="en">We won <strong>second place</strong> at the GDG Hackathon hosted by the <strong>Egyptian Chinese University (ECU)</strong>, presenting IRIS as a learning solution that starts from the child rather than the curriculum.</span>
-        </p>
-        <div class="tags">
-          <span>GDG</span>
-          <span><span class="ar">الجامعة المصرية الصينية · ECU</span><span class="en">Egyptian Chinese University · ECU</span></span>
-          <span><span class="ar">المركز الثاني</span><span class="en">2nd place</span></span>
-          <span>2025</span>
-        </div>
-      </div>
-    </article>
-
-    <div class="awards">
-      <article class="award" data-reveal data-tilt>
-        <div class="award-media badge-media">
-          <div class="mini-medal"><b>1</b><span>1ST PLACE</span></div>
-        </div>
-        <div class="award-body" style="--tone:var(--blue);--wash:var(--blue-wash)">
-          <span class="award-tag">UCM · 2025</span>
-          <h3><span class="ar">المركز الأول — UCM</span><span class="en">First place — UCM</span></h3>
-          <p>
-            <span class="ar"><strong>المركز الأول</strong> في مسابقة UCM بـ IEEE RUSB – جامعة الريادة، للتميّز التقني والعمل الجماعي.</span>
-            <span class="en"><strong>First place</strong> at the UCM competition, IEEE RUSB – AlRyada University, for technical excellence and teamwork.</span>
-          </p>
-        </div>
-      </article>
-
-      <article class="award" data-reveal data-tilt>
-        <div class="award-media">
-          <img src="asserts/ic-ftai-team.jpg" alt="IRIS team at IC-FTAI 2025" loading="lazy" style="object-position:center 22%">
-          <span class="badge">Top 6 / 21</span>
-        </div>
-        <div class="award-body" style="--tone:var(--purple, #8060b4);--wash:#f0eaf8">
-          <span class="award-tag">IEEE · 2025</span>
-          <h3>IC-FTAI 2025 — IEEE Egypt</h3>
-          <p>
-            <span class="ar">اختيار IRIS ضمن <strong>أفضل ٦ مشروعات من ٢١</strong>، للابتكار وجودة البحث والأثر المجتمعي.</span>
-            <span class="en">IRIS was selected among the <strong>top 6 out of 21</strong> projects for innovation, research quality and social impact.</span>
-          </p>
-        </div>
-      </article>
-
-      <article class="award" data-reveal data-tilt>
-        <div class="award-media">
-          <img src="asserts/giza-syndicate.jpg" alt="IRIS at the Giza Engineers Syndicate" loading="lazy">
-          <span class="badge"><span class="ar">تقدير</span><span class="en">Honoured</span></span>
-        </div>
-        <div class="award-body" style="--tone:var(--green);--wash:var(--green-wash)">
-          <span class="award-tag"><span class="ar">نقابة مهندسين</span><span class="en">Syndicate</span></span>
-          <h3><span class="ar">نقابة مهندسين الجيزة</span><span class="en">Giza Engineers Syndicate</span></h3>
-          <p>
-            <span class="ar">عرضنا IRIS في <strong>نقابة مهندسين الجيزة</strong> واتقابلنا بتقدير كبير، مع وعد بدعم المشروع ومساعدته على التطوير.</span>
-            <span class="en">We presented IRIS at the <strong>Giza Engineers Syndicate</strong> and received strong appreciation, with support pledged to help the project grow.</span>
-          </p>
+        <div class="mate-info">
+          <h3>Mazen Mahmoud</h3>
+          <p class="role"><span class="ar">محتوى وأنشطة</span><span class="en">Content &amp; activities</span></p>
+          <div class="links">
+            <a href="mailto:mazenmahmoudmoussa@gmail.com" aria-label="Email Mazen Mahmoud" title="mazenmahmoudmoussa@gmail.com">
+              <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+            </a>
+            <a href="tel:+201096275848" aria-label="Call Mazen Mahmoud" title="+20 109 627 5848">
+              <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M5 3h3l2 5-2.5 1.5a12 12 0 0 0 6 6L15 13l5 2v3a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.2A2 2 0 0 1 5 3z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/mazen-mahmoud-276077333" target="_blank" rel="noopener" aria-label="Mazen Mahmoud on LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.02-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21h-4z"/></svg>
+            </a>
+          </div>
         </div>
       </article>
     </div>
+
+    <div class="moments">
+      <p class="moments-title"><span class="ar">لحظات من الرحلة</span><span class="en">Moments from the journey</span></p>
+      <div class="moment-row">
+        <figure class="moment" data-reveal>
+          <img src="asserts/gdg-ecu.jpg" alt="فريق IRIS في هاكاثون GDG بالجامعة المصرية الصينية" loading="lazy">
+          <figcaption><span class="ar">هاكاثون GDG · ECU</span><span class="en">GDG Hackathon · ECU</span></figcaption>
+        </figure>
+        <figure class="moment" data-reveal>
+          <img src="asserts/ic-ftai-team.jpg" alt="فريق IRIS في مسابقة IC-FTAI" loading="lazy">
+          <figcaption><span class="ar">IC-FTAI · IEEE</span><span class="en">IC-FTAI · IEEE</span></figcaption>
+        </figure>
+        <figure class="moment" data-reveal>
+          <img src="asserts/giza-syndicate.jpg" alt="فريق IRIS في نقابة مهندسين الجيزة" loading="lazy">
+          <figcaption><span class="ar">نقابة مهندسين الجيزة</span><span class="en">Giza Engineers Syndicate</span></figcaption>
+        </figure>
+      </div>
+    </div>
   </section>
 
-  <!-- ============================================================ cta -->
-  <section class="wrap">
-    <div class="cta" id="contact" data-reveal>
-      <img class="cta-logo" src="asserts/logo-iris.png" alt="" aria-hidden="true">
-      <div>
-        <h2><span class="ar">تحب تتواصل مع الفريق؟</span><span class="en">Want to reach the team?</span></h2>
-        <p>
-          <span class="ar">لو عندك سؤال عن المنصة، شراكة، أو دعوة لعرض IRIS — إحنا جاهزين.</span>
-          <span class="en">Questions about the platform, partnerships, or an invitation to present IRIS — we are ready.</span>
-        </p>
-      </div>
-      <div class="cta-actions">
-        <a class="btn btn-primary" href="mailto:aehab3850@gmail.com" data-magnetic>
-          <span class="ar">راسلنا</span><span class="en">Email us</span>
+  <!-- ══════════════════════════════ contact -->
+  <section class="contact" id="contact">
+    <div class="card-contact" data-reveal>
+      <img class="watermark" src="asserts/logo-iris.png" alt="" aria-hidden="true" width="750" height="533">
+
+      <header class="contact-head">
+        <span class="kicker"><span class="ar">خطوة واحدة</span><span class="en">One step</span></span>
+        <h2><span class="ar">خلّينا نتكلم 👋</span><span class="en">Let's talk 👋</span></h2>
+        <p><span class="ar">سؤال، شراكة، أو دعوة لعرض IRIS — اختار الطريقة الأسهل ليك.</span><span class="en">A question, a partnership, or an invitation to present IRIS — pick whatever is easiest.</span></p>
+      </header>
+
+      <div class="tiles">
+        <a class="tile t-mail confetti" href="mailto:aehab3850@gmail.com?subject=IRIS%20Team">
+          <span class="tile-ico">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+          </span>
+          <span class="tile-text">
+            <b><span class="ar">إيميل الفريق</span><span class="en">Email the team</span></b>
+            <small>aehab3850@gmail.com</small>
+          </span>
         </a>
-        <a class="btn btn-ghost" href="https://iris-kohl-seven.vercel.app/" target="_blank" rel="noopener" data-magnetic>
-          <span class="ar">الموقع الرئيسي</span><span class="en">Main website</span>
+
+        <a class="tile t-site" href="https://iris-kohl-seven.vercel.app/" target="_blank" rel="noopener">
+          <span class="tile-ico">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M2.8 12h18.4M12 2.8c2.6 2.6 4 5.8 4 9.2s-1.4 6.6-4 9.2c-2.6-2.6-4-5.8-4-9.2s1.4-6.6 4-9.2z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </span>
+          <span class="tile-text">
+            <b><span class="ar">الموقع الرئيسي</span><span class="en">Main website</span></b>
+            <small>iris-kohl-seven.vercel.app</small>
+          </span>
+        </a>
+      </div>
+
+      <p class="quick-title"><span class="ar">أو كلّم حد مننا على طول</span><span class="en">Or reach a member directly</span></p>
+      <div class="quick">
+        <a class="q" href="mailto:aehab3850@gmail.com" style="--tone:#1d4e9c;--wash:#e9f0fb">
+          <img src="asserts/ahmed-ehab.jpg" alt="" loading="lazy">
+          <span>Ahmed</span>
+        </a>
+        <a class="q" href="mailto:shahdeldeeb715@gmail.com" style="--tone:#e8322e;--wash:#fdeaea">
+          <img src="asserts/shahd-amr.jpg" alt="" loading="lazy">
+          <span>Shahd</span>
+        </a>
+        <a class="q" href="mailto:mazenmahmoudmoussa@gmail.com" style="--tone:#2e9a5b;--wash:#e6f6ed">
+          <img src="asserts/mazen-mahmoud.jpg" alt="" loading="lazy">
+          <span>Mazen</span>
         </a>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="site-foot">
-  <div class="wrap foot-inner">
-    <img src="asserts/logo-iris.png" alt="IRIS" width="720" height="720">
-    <span>© 2025 <span class="ar">فريق IRIS — صُنع بحب</span><span class="en">Team IRIS — made with love</span></span>
-    <a href="https://iris-kohl-seven.vercel.app/" target="_blank" rel="noopener">iris-kohl-seven.vercel.app</a>
-  </div>
+<footer class="foot">
+  <img src="asserts/logo-iris.png" alt="IRIS" width="750" height="533">
+  <p>© 2025 <span class="ar">فريق IRIS — صُنع بحب للأطفال</span><span class="en">Team IRIS — made with love for kids</span></p>
 </footer>
 
-<script src="script.js?v=7"></script>
+<script src="script.js?v=9"></script>
 </body>
 </html>

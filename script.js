@@ -1,8 +1,9 @@
-/* IRIS — team page: language, reveal, counters, parallax, tilt, confetti */
+/* IRIS — language, reveal, parallax, magnetic buttons, confetti */
 (function () {
   "use strict";
 
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var fine = window.matchMedia("(pointer: fine)").matches;
   var root = document.documentElement;
 
   /* ------------------------------------------------------------ language */
@@ -31,24 +32,9 @@
     });
   }
 
-  /* ------------------------------------------------------------ header + progress */
-  var head = document.getElementById("siteHead");
-  var bar = document.getElementById("progressBar");
-
-  function onScroll() {
-    var y = window.scrollY || window.pageYOffset;
-    if (head) head.classList.toggle("is-stuck", y > 6);
-    if (bar) {
-      var h = document.documentElement.scrollHeight - window.innerHeight;
-      bar.style.width = (h > 0 ? Math.min(100, (y / h) * 100) : 0) + "%";
-    }
-  }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", onScroll);
-  onScroll();
-
   /* ------------------------------------------------------------ reveal */
   var items = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"));
+
   if (!reduce && "IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -61,171 +47,106 @@
           : [];
         var i = siblings.indexOf(el);
         if (!el.style.getPropertyValue("--d") && i > 0) {
-          el.style.setProperty("--d", Math.min(i * 90, 360) + "ms");
+          el.style.setProperty("--d", Math.min(i * 110, 330) + "ms");
         }
         el.classList.add("in");
         io.unobserve(el);
       });
-    }, { threshold: 0.12, rootMargin: "0px 0px -60px 0px" });
+    }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
     items.forEach(function (el) { io.observe(el); });
   } else {
     items.forEach(function (el) { el.classList.add("in"); });
   }
 
-  /* ------------------------------------------------------------ counters */
-  var counters = Array.prototype.slice.call(document.querySelectorAll("[data-count]"));
-  function runCounter(el) {
-    var target = parseFloat(el.getAttribute("data-count"));
-    var suffix = el.getAttribute("data-suffix") || "";
-    if (reduce) { el.textContent = target + suffix; return; }
-    var start = null, dur = 1300;
-    function step(ts) {
-      if (start === null) start = ts;
-      var p = Math.min(1, (ts - start) / dur);
-      var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(target * eased) + suffix;
-      if (p < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-  if ("IntersectionObserver" in window) {
-    var cio = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        runCounter(e.target);
-        cio.unobserve(e.target);
-      });
-    }, { threshold: 0.6 });
-    counters.forEach(function (el) { cio.observe(el); });
-  } else {
-    counters.forEach(runCounter);
-  }
+  /* ------------------------------------------------------------ parallax doodles */
+  var stage = document.getElementById("stage");
+  var layers = stage ? Array.prototype.slice.call(stage.querySelectorAll("[data-depth]")) : [];
 
-  /* ------------------------------------------------------------ hero parallax */
-  var heroArt = document.getElementById("heroArt");
-  var floats = heroArt ? Array.prototype.slice.call(heroArt.querySelectorAll("[data-depth]")) : [];
-  if (heroArt && floats.length && !reduce && window.matchMedia("(pointer:fine)").matches) {
+  if (stage && layers.length && !reduce && fine) {
     var tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
 
     function loop() {
-      cx += (tx - cx) * 0.08;
-      cy += (ty - cy) * 0.08;
-      floats.forEach(function (el) {
+      cx += (tx - cx) * 0.09;
+      cy += (ty - cy) * 0.09;
+      layers.forEach(function (el) {
         var d = parseFloat(el.getAttribute("data-depth")) || 12;
-        el.style.transform = "translate3d(" + (cx * d) + "px," + (cy * d) + "px,0)";
+        el.style.translate = (cx * d).toFixed(2) + "px " + (cy * d).toFixed(2) + "px";
       });
-      if (Math.abs(tx - cx) > 0.001 || Math.abs(ty - cy) > 0.001) {
+      if (Math.abs(tx - cx) > 0.002 || Math.abs(ty - cy) > 0.002) {
         raf = requestAnimationFrame(loop);
       } else {
         raf = null;
       }
     }
 
-    heroArt.addEventListener("pointermove", function (e) {
-      var r = heroArt.getBoundingClientRect();
+    stage.addEventListener("pointermove", function (e) {
+      var r = stage.getBoundingClientRect();
       tx = ((e.clientX - r.left) / r.width - 0.5) * 2;
       ty = ((e.clientY - r.top) / r.height - 0.5) * 2;
       if (!raf) raf = requestAnimationFrame(loop);
     });
-    heroArt.addEventListener("pointerleave", function () {
+    stage.addEventListener("pointerleave", function () {
       tx = 0; ty = 0;
       if (!raf) raf = requestAnimationFrame(loop);
     });
   }
 
-  /* ------------------------------------------------------------ tilt cards */
-  if (!reduce && window.matchMedia("(pointer:fine)").matches) {
-    document.querySelectorAll("[data-tilt]").forEach(function (card) {
-      var base = card.style.getPropertyValue("--rot") || "0deg";
-      card.addEventListener("pointermove", function (e) {
-        var r = card.getBoundingClientRect();
-        var px = (e.clientX - r.left) / r.width - 0.5;
-        var py = (e.clientY - r.top) / r.height - 0.5;
-        card.style.transition = "transform .12s ease-out";
-        card.style.transform =
-          "perspective(700px) rotateX(" + (-py * 7).toFixed(2) + "deg) rotateY(" +
-          (px * 7).toFixed(2) + "deg) translateY(-6px)";
-      });
-      card.addEventListener("pointerleave", function () {
-        card.style.transition = "";
-        card.style.transform = "";
-      });
-    });
-  }
-
   /* ------------------------------------------------------------ magnetic buttons */
-  if (!reduce && window.matchMedia("(pointer:fine)").matches) {
-    document.querySelectorAll("[data-magnetic]").forEach(function (btn) {
+  if (!reduce && fine) {
+    document.querySelectorAll(".btn").forEach(function (btn) {
       btn.addEventListener("pointermove", function (e) {
         var r = btn.getBoundingClientRect();
         var px = (e.clientX - r.left) / r.width - 0.5;
         var py = (e.clientY - r.top) / r.height - 0.5;
-        btn.style.transform = "translate(" + (px * 8).toFixed(1) + "px," + (py * 6 - 3).toFixed(1) + "px)";
+        btn.style.transform = "translate(" + (px * 7).toFixed(1) + "px," + (py * 5 - 2).toFixed(1) + "px)";
       });
-      btn.addEventListener("pointerleave", function () {
-        btn.style.transform = "";
-      });
+      btn.addEventListener("pointerleave", function () { btn.style.transform = ""; });
     });
   }
 
-  /* ------------------------------------------------------------ confetti burst */
-  var host = document.getElementById("gdgCard");
-  var colors = ["#e8322e", "#1d4e9c", "#2e9a5b", "#ffc93c", "#f59b4b", "#ff8fa3"];
-  var lastBurst = 0;
+  /* ------------------------------------------------------------ confetti feedback */
+  var colors = ["#e8322e", "#1d4e9c", "#2e9a5b", "#ffc93c", "#f59b4b", "#ff9aae"];
 
   function burst(x, y) {
     if (reduce) return;
-    var now = Date.now();
-    if (now - lastBurst < 700) return;
-    lastBurst = now;
-
-    var rect = host.getBoundingClientRect();
-    var px = x === undefined ? rect.width * 0.32 : x - rect.left;
-    var py = y === undefined ? rect.height * 0.4 : y - rect.top;
-
-    for (var i = 0; i < 26; i++) {
+    for (var i = 0; i < 22; i++) {
       var p = document.createElement("i");
       p.className = "confetti-piece";
       p.style.background = colors[i % colors.length];
-      p.style.left = px + "px";
-      p.style.top = py + "px";
+      p.style.left = x + "px";
+      p.style.top = y + "px";
       p.style.borderRadius = i % 3 === 0 ? "50%" : "2px";
-      host.appendChild(p);
+      document.body.appendChild(p);
 
-      var angle = (Math.PI * 2 * i) / 26 + Math.random() * 0.4;
-      var dist = 60 + Math.random() * 110;
+      var angle = (Math.PI * 2 * i) / 22 + Math.random() * 0.5;
+      var dist = 55 + Math.random() * 95;
 
-      p.animate(
-        [
-          { transform: "translate(-50%,-50%) rotate(0deg) scale(1)", opacity: 1 },
-          {
-            transform:
-              "translate(" + (Math.cos(angle) * dist - 50) + "%," +
-              (Math.sin(angle) * dist + 60 - 50) + "%) rotate(" + (Math.random() * 540) + "deg) scale(.4)",
-            opacity: 0
-          }
-        ],
-        { duration: 900 + Math.random() * 500, easing: "cubic-bezier(.2,.7,.3,1)" }
-      ).onfinish = (function (node) {
-        return function () { node.remove(); };
-      })(p);
+      p.animate([
+        { transform: "translate(-50%,-50%) rotate(0deg) scale(1)", opacity: 1 },
+        {
+          transform:
+            "translate(" + (Math.cos(angle) * dist - 50) + "%," +
+            (Math.sin(angle) * dist + 55 - 50) + "%) rotate(" + (Math.random() * 520) + "deg) scale(.35)",
+          opacity: 0
+        }
+      ], { duration: 850 + Math.random() * 450, easing: "cubic-bezier(.2,.7,.3,1)" })
+        .onfinish = (function (node) { return function () { node.remove(); }; })(p);
     }
   }
 
-  if (host && !reduce) {
-    host.addEventListener("pointerenter", function (e) { burst(e.clientX, e.clientY); });
-    host.addEventListener("click", function (e) { burst(e.clientX, e.clientY); });
-  }
+  document.querySelectorAll(".confetti").forEach(function (el) {
+    el.addEventListener("click", function (e) { burst(e.clientX, e.clientY); });
+  });
 
   /* ------------------------------------------------------------ smooth anchors */
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     a.addEventListener("click", function (e) {
       var id = a.getAttribute("href");
       if (!id || id === "#") return;
-      var t = document.querySelector(id);
-      if (!t) return;
+      var target = document.querySelector(id);
+      if (!target) return;
       e.preventDefault();
-      t.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+      target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
     });
   });
 })();
