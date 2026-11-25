@@ -91,6 +91,22 @@
     });
   }
 
+  /* ------------------------------------------------------------ scroll parallax */
+  var heroLogo = document.querySelector(".hero-logo");
+  if (heroLogo && !reduce) {
+    var ticking = false;
+    window.addEventListener("scroll", function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        var y = window.scrollY || window.pageYOffset;
+        var shift = Math.min(y * 0.12, 46);
+        heroLogo.style.translate = "0 " + (-shift).toFixed(1) + "px";
+        ticking = false;
+      });
+    }, { passive: true });
+  }
+
   /* ------------------------------------------------------------ magnetic buttons */
   if (!reduce && fine) {
     document.querySelectorAll(".btn").forEach(function (btn) {
