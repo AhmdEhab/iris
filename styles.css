@@ -336,8 +336,8 @@ html[data-lang="en"] .section-head h2 { letter-spacing: -0.015em; }
 }
 .place-chip {
   position: absolute;
-  bottom: .7rem;
-  inset-inline-start: .7rem;
+  top: .7rem;
+  inset-inline-end: .7rem;
   display: inline-flex;
   align-items: center;
   gap: .45rem;
