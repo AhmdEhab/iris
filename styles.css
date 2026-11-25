@@ -533,16 +533,15 @@ html[dir="rtl"] .mate:hover .tape { rotate: 12deg; }
   position: relative;
   display: grid;
   grid-template-rows: auto 1fr;
-  padding: .5rem .5rem .85rem;
+  padding: .55rem;
   border-radius: 26px;
-  background: rgba(255, 255, 255, .74);
-  box-shadow: inset 0 0 0 1.5px rgba(36, 27, 18, .05);
-  transition: transform .35s cubic-bezier(.34, 1.4, .64, 1), box-shadow .35s ease, background .3s;
+  background: #fff;
+  box-shadow: 0 5px 0 var(--wash), 0 16px 26px -22px rgba(60, 40, 20, .45), inset 0 0 0 1.5px rgba(36, 27, 18, .05);
+  transition: transform .35s cubic-bezier(.34, 1.4, .64, 1), box-shadow .35s ease;
 }
 .win:hover {
-  transform: translateY(-4px) rotate(-.35deg);
-  background: #fff;
-  box-shadow: 0 6px 0 var(--wash), 0 22px 32px -24px rgba(60, 40, 20, .5), inset 0 0 0 1.5px rgba(36, 27, 18, .06);
+  transform: translateY(-5px) rotate(-.4deg);
+  box-shadow: 0 9px 0 var(--wash), 0 26px 34px -24px rgba(60, 40, 20, .55), inset 0 0 0 1.5px rgba(36, 27, 18, .08);
 }
 .win-thumb {
   position: relative;
@@ -557,7 +556,7 @@ html[dir="rtl"] .mate:hover .tape { rotate: 12deg; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 22%;
+  object-position: center 24%;
   transition: scale .6s cubic-bezier(.22, 1, .36, 1);
 }
 .win:hover .win-thumb img { scale: 1.05; }
@@ -565,7 +564,7 @@ html[dir="rtl"] .mate:hover .tape { rotate: 12deg; }
   display: grid;
   place-items: center;
   align-content: center;
-  gap: .15rem;
+  gap: .2rem;
   background:
     radial-gradient(circle at 76% 16%, rgba(255, 255, 255, .6), transparent 46%),
     linear-gradient(150deg, var(--wash), color-mix(in srgb, var(--tone) 24%, #fff));
@@ -575,68 +574,70 @@ html[dir="rtl"] .mate:hover .tape { rotate: 12deg; }
 .win-thumb--badge::before {
   content: "";
   position: absolute;
-  width: 62%;
+  width: 66%;
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 2px dashed color-mix(in srgb, var(--tone) 38%, transparent);
-  opacity: .55;
+  background: rgba(255, 255, 255, .92);
+  border: 2px dashed color-mix(in srgb, var(--tone) 34%, transparent);
+  box-shadow: 0 10px 22px -14px color-mix(in srgb, var(--tone) 65%, transparent);
 }
 .win-thumb--badge b,
 .win-thumb--badge i { position: relative; }
 .win-thumb--badge b {
-  font-size: 2.1rem;
+  font-size: 2.7rem;
   font-weight: 800;
   line-height: 1;
   letter-spacing: .02em;
 }
 .win-thumb--badge i {
   font-style: normal;
-  font-size: .64rem;
+  font-size: .68rem;
   font-weight: 800;
   letter-spacing: .18em;
   opacity: .7;
 }
-.win-text { min-width: 0; padding: .75rem .6rem .2rem; }
+.win-text { min-width: 0; padding: .85rem .8rem .75rem; }
 .win-text h4 {
-  font-size: 1.02rem;
+  font-size: 1.04rem;
   font-weight: 800;
   line-height: 1.45;
 }
 .win-text p {
-  font-size: .84rem;
-  line-height: 1.6;
+  font-size: .9rem;
+  line-height: 1.7;
   color: var(--ink-soft);
-  margin-top: .3rem;
+  margin-top: .4rem;
 }
 .win-prize {
   display: inline-block;
-  margin-top: .75rem;
-  padding: .38rem .9rem;
+  margin-top: .8rem;
+  padding: .4rem .95rem;
   border-radius: 999px;
   background: color-mix(in srgb, var(--tone) 14%, #fff);
   box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--tone) 32%, transparent);
   color: color-mix(in srgb, var(--tone) 82%, #241b12);
-  font-size: .8rem;
+  font-size: .82rem;
   font-weight: 800;
   rotate: -1.2deg;
 }
 .win-medal {
   position: absolute;
-  top: .8rem;
-  inset-inline-start: .8rem;
-  width: 38px;
-  height: 38px;
+  top: 1rem;
+  inset-inline-start: 1rem;
+  width: 46px;
+  height: 46px;
   display: grid;
   place-items: center;
   border-radius: 50%;
   background: var(--tone);
   color: #fff;
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 800;
-  box-shadow: 0 4px 0 color-mix(in srgb, var(--tone) 55%, #fff), 0 0 0 3px rgba(255, 255, 255, .9);
+  box-shadow: 0 5px 0 color-mix(in srgb, var(--tone) 55%, #fff), 0 0 0 4px rgba(255, 255, 255, .92);
   transition: rotate .4s cubic-bezier(.34, 1.6, .64, 1), scale .4s;
 }
+
 .win:hover .win-medal { rotate: 12deg; scale: 1.08; }
 
 /* ---------------------------------------------------------------- contact */
@@ -813,8 +814,7 @@ html[dir="rtl"] .mate:hover .tape { rotate: 12deg; }
 
 /* ---------------------------------------------------------------- tablet */
 @media (max-width: 559px) {
-  .win-thumb { aspect-ratio: 5 / 4; }
-  .win-medal { width: 34px; height: 34px; font-size: .92rem; }
+  .win-medal { width: 42px; height: 42px; font-size: 1rem; }
 }
 
 @media (min-width: 560px) {
@@ -864,6 +864,14 @@ html[dir="rtl"] .mate:hover .tape { rotate: 12deg; }
   .moment img { aspect-ratio: 16 / 11; }
 
   .win-list { grid-template-columns: repeat(3, 1fr); gap: .9rem; }
+  .win { background: rgba(255, 255, 255, .74); box-shadow: inset 0 0 0 1.5px rgba(36, 27, 18, .05); }
+  .win:hover {
+    box-shadow: 0 5px 0 var(--wash), 0 22px 32px -24px rgba(60, 40, 20, .5), inset 0 0 0 1.5px rgba(36, 27, 18, .06);
+  }
+  .win-text { padding: .7rem .5rem .2rem; }
+  .win-text h4 { font-size: .98rem; }
+  .win-text p { font-size: .84rem; line-height: 1.65; }
+  .win-medal { width: 38px; height: 38px; font-size: .98rem; top: .85rem; inset-inline-start: .85rem; }
   .win--lead {
     grid-column: 1 / -1;
     grid-template-columns: 1.05fr 1fr;
